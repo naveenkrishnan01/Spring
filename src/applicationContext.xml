@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd" 
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://www.springframework.org/schema/beans">
+
+
+  <context:property-placeholder location="classpath:rules320.properties"/>
+  
+
+<!-- Define your beans here -->
+  
+ <!-- Define the dependency -->
+ <bean id="myRules"
+   class="com.example.rule.ReadFile">
+   
+ 
+  <!-- Inject Literal values -->
+  <property name="RuleTyeRec" value="${foo.ruleType}" />
+  <property name="customerIDRec" value="${foo.customerID}" />
+  
+ 
+ </bean> 
+    
+</beans>
